@@ -25,7 +25,7 @@ class ArtistProfile(models.Model):
     bio = models.TextField(blank=True)
     genre = models.CharField(max_length=50)
     rate_per_hour = models.DecimalField(max_digits=10, decimal_places=2)
-    profile_picture = models.ImageField(upload_to='artist_pics/', blank=True)
+    profile_picture = models.ImageField(upload_to='artist_pics/', blank=True, null=True)
     is_available = models.BooleanField(default=True)
 
     class Meta:
