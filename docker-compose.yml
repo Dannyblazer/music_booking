@@ -1,0 +1,11 @@
+# docker-compose.yml
+version: '3.8'
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: music_booking_db
+      POSTGRES_USER: taskitly
+      POSTGRES_PASSWORD: taskitlyforlife
+  redis:
+    image: redis:6
