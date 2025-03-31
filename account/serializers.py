@@ -18,7 +18,8 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 class ArtistProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only=True)
+    user = UserSerializer(read_only=True)  # Read-only, set by the view
+
     class Meta:
         model = ArtistProfile
         fields = ['id', 'user', 'stage_name', 'bio', 'genre', 'rate_per_hour', 'profile_picture', 'is_available']
